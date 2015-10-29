@@ -353,9 +353,8 @@ module.exports = function (THREE) {
           buffergeometry.addAttribute( 'uv', new THREE.BufferAttribute( new Float32Array( geometry.uvs ), 2 ) );
         }
           
-        buffergeometry.computeVertexNormals();
         buffergeometry.computeFaceNormals();
-        buffergeometry.dynamic = true;
+        buffergeometry.computeVertexNormals();
 
         var material = new THREE.MeshLambertMaterial();
         material.name = object.material.name;
